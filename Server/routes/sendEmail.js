@@ -1,24 +1,11 @@
 const router = require("express").Router();
 var nodemailer = require('nodemailer');
+const dotenv = require("dotenv");
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'youremail@gmail.com',
-    pass: 'yourpassword'
-  }
-});
+dotenv.config();
 
 
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-
+//will receive a list of recipents email,name
 router.post("/sendEmail", async (req, res) => {
     console.log("test");
     try {
@@ -38,8 +25,8 @@ router.post("/sendEmail", async (req, res) => {
         var transporter = nodemailer.createTransport({
             service: req.body.service, //'gmail',
             auth: {
-              user: 'youremail@gmail.com',
-              pass: 'yourpassword'
+              user: process.env.SEND_EMAIL_USER,
+              pass: process.env.SEND_EMAIL_PASSWORD
             }
           });
         
