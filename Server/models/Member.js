@@ -7,15 +7,15 @@ const MemberSchema = new mongoose.Schema(
         required: true,
         unique: false,
     },
-    Lname: {
-        type: String,
-        required: true,
-        unique: false,  
-    },
     Mname: {
         type: String,
         required: false,
         unique: false,
+    },
+    Lname: {
+        type: String,
+        required: true,
+        unique: false,  
     },
     email: {
         type: String,
