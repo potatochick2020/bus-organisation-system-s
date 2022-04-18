@@ -27,7 +27,7 @@ router.post("/add", async (req, res) => {
 
 //Get all member
 
-router.get("/getALL", async (req, res) => {
+router.get("/getAll", async (req, res) => {
     try {
       let members;
       members = await Member.find();
