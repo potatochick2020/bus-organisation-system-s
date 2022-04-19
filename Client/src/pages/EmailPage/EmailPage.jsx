@@ -2,17 +2,20 @@ import MembersTable from "../../components/members/MembersTable";
 import {Container,Row,Col} from "react-bootstrap"
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import "./emailPage.css";
+import React, { Component } from 'react';
+
+
 
 function EmailPage(){
     return (
-            <>
+            <Container>
                 <Row>
-                <h2>Using CKEditor 5 build in React</h2>
                 <CKEditor
+                    className="edit"
                     editor={ ClassicEditor }
                     data="<p>Hello from CKEditor 5!</p>"
                     onReady={ editor => {
-                        // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );
                     } }
                     onChange={ ( event, editor ) => {
@@ -30,8 +33,7 @@ function EmailPage(){
                 <Row>
                     <Col xs={6}><MembersTable /></Col>
                 </Row>
-                
-            </>
+            </Container>
     )
 }
 
