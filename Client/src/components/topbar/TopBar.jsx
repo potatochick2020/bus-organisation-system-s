@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from "react-router-dom";
 
 function TopBar(){
     return (
@@ -15,6 +16,7 @@ function TopBar(){
         <Nav.Link href="#features">Member</Nav.Link>
         <Nav.Link href="#pricing">Bus Route</Nav.Link>
         <Nav.Link href="#pricing">Driver</Nav.Link>
+        <Nav.Link href="#pricing"><Link className="link" to="/Email">Email</Link></Nav.Link>
         <NavDropdown title="Send Email" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">secrets</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">send email</NavDropdown.Item>

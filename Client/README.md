@@ -1,3 +1,9 @@
+the email page use  CKEditor 5! as the editor of editing the email
+https://ckeditor.com/docs/ckeditor5/ 
+
+convert to html through htmlpraser
+https://www.npmjs.com/package/react-html-parser 
+-----
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

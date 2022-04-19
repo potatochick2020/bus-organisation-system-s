@@ -1,16 +1,10 @@
 import React from 'react'
-
 import Table from 'react-bootstrap/Table';
-
-
-
 import {
   useState,
   useEffect
 } from "react";
-import {
-  Link
-} from "react-router-dom";
+
 import axios from "axios";
 
 /*
@@ -28,6 +22,7 @@ import axios from "axios";
 */
 
 function Member({member}){
+    let x ;
     return(
         <tr>
             <td>{member.Fname}</td>
